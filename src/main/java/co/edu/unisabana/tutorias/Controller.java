@@ -81,3 +81,8 @@ public class Controller {
             }
         }
     }
+    private int generarCodigoSesion() {
+        Random rnd = new Random();
+        return 100000 + rnd.nextInt(900000);
+    }
+}
