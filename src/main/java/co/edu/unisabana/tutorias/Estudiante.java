@@ -12,11 +12,9 @@ public class Estudiante {
     private List<String> habilidades;
     private List<Disponibilidad> disponibilidad;
 
-    // Constructor vacío
     public Estudiante() {
     }
 
-    // Constructor con parámetros
     public Estudiante(int codigo, String nombre, String facultad, String programa, int semestre, List<String> habilidades, List<Disponibilidad> disponibilidad) {
         this.codigo = codigo;
         this.nombre = nombre;
