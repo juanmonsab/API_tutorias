@@ -24,3 +24,11 @@ public class Controller {
         estudiantes.add(estudiante);
         return new Respuesta("Se ha creado el estudiante correctamente");
     }
+    @GetMapping("/todos")
+    public ResponseEntity<List<Estudiante>> mostrarEstudiantes() {
+        return new ResponseEntity<>(estudiantes, HttpStatus.OK);
+    }
+    @GetMapping("/sesiones")
+    public ResponseEntity<List<Sesion>> mostrarSesiones() {
+        return new ResponseEntity<>(sesiones, HttpStatus.OK);
+    }
