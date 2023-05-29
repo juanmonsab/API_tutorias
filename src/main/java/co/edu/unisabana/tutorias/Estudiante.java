@@ -26,3 +26,58 @@ public class Estudiante {
         this.habilidades = habilidades;
         this.disponibilidad = disponibilidad;
     }
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getFacultad() {
+        return facultad;
+    }
+
+    public void setFacultad(String facultad) {
+        this.facultad = facultad;
+    }
+
+    public String getPrograma() {
+        return programa;
+    }
+
+    public void setPrograma(String programa) {
+        this.programa = programa;
+    }
+
+    public int getSemestre() {
+        return semestre;
+    }
+
+    public void setSemestre(int semestre) {
+        this.semestre = semestre;
+    }
+
+    public List<String> getHabilidades() {
+        return habilidades;
+    }
+
+    public void setHabilidades(List<String> habilidades) {
+        this.habilidades = habilidades;
+    }
+
+    public List<Disponibilidad> getDisponibilidad() {
+        return disponibilidad;
+    }
+
+    public void setDisponibilidad(List<Disponibilidad> disponibilidad) {
+        this.disponibilidad = disponibilidad;
+    }
