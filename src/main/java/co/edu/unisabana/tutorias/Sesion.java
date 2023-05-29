@@ -17,3 +17,43 @@ public class Sesion {
         this.horarioInicio = horarioInicio;
         this.horarioFin = horarioFin;
     }
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public Estudiante getTutor() {
+        return tutor;
+    }
+
+    public void setTutor(Estudiante tutor) {
+        this.tutor = tutor;
+    }
+
+    public String getDia() {
+        return dia;
+    }
+
+    public void setDia(String dia) {
+        this.dia = dia;
+    }
+
+    public String getHorarioInicio() {
+        return horarioInicio;
+    }
+
+    public void setHorarioInicio(String horarioInicio) {
+        this.horarioInicio = horarioInicio;
+    }
+
+    public String getHorarioFin() {
+        return horarioFin;
+    }
+
+    public void setHorarioFin(String horarioFin) {
+        this.horarioFin = horarioFin;
+    }
+}
