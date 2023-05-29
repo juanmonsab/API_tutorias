@@ -92,3 +92,8 @@ public class Estudiante {
         Estudiante estudiante = (Estudiante) obj;
         return codigo == estudiante.codigo;
     }
+    @Override
+    public int hashCode() {
+        return Objects.hash(codigo);
+    }
+}
