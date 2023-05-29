@@ -11,3 +11,19 @@ public class Disponibilidad {
         this.dia = dia;
         this.horario = horario;
     }
+    public String getDia() {
+        return dia;
+    }
+
+    public void setDia(String dia) {
+        this.dia = dia;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+}
