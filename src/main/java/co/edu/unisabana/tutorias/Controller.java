@@ -60,3 +60,15 @@ public class Controller {
         }
         return new ResponseEntity<>(new Respuesta("No se encontró el estudiante"), HttpStatus.NOT_FOUND);
     }
+    @DeleteMapping("/sesiones/eliminar/{codigo}")
+    public ResponseEntity<Respuesta> eliminarSesion(@PathVariable("codigo") int codigo) {
+        Iterator<Sesion> iterator = sesiones.iterator();
+        while (iterator.hasNext()) {
+            Sesion sesion = iterator.next();
+            if (sesion.getCodigo() == codigo) {
+                iterator.remove();
+                return new ResponseEntity<>(new Respuesta("Se ha eliminado la sesión correctamente"), HttpStatus.OK);
+            }
+        }
+        return new ResponseEntity<>(new Respuesta("No se encontró la sesión"), HttpStatus.NOT_FOUND);
+    }
