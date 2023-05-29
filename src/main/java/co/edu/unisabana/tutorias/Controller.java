@@ -72,3 +72,12 @@ public class Controller {
         }
         return new ResponseEntity<>(new Respuesta("No se encontró la sesión"), HttpStatus.NOT_FOUND);
     }
+    private void eliminarSesionesPorEstudiante(Estudiante estudiante) {
+        Iterator<Sesion> iterator = sesiones.iterator();
+        while (iterator.hasNext()) {
+            Sesion sesion = iterator.next();
+            if (sesion.getTutor() != null && sesion.getTutor().equals(estudiante)) {
+                iterator.remove();
+            }
+        }
+    }
