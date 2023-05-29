@@ -32,3 +32,18 @@ public class Controller {
     public ResponseEntity<List<Sesion>> mostrarSesiones() {
         return new ResponseEntity<>(sesiones, HttpStatus.OK);
     }
+    @PostMapping("/crearSesion")
+    public ResponseEntity<Respuesta> crearSesion(@RequestBody Sesion sesion) {
+        int codigoSesion = generarCodigoSesion();
+        sesion.setCodigo(codigoSesion);
+
+        Estudiante tutor = sesion.getTutor();
+
+        if (!estudiantes.contains(tutor)) {
+            return new ResponseEntity<>(new Respuesta("No se encontró el tutor"), HttpStatus.NOT_FOUND);
+        }
+
+        sesiones.add(sesion);
+
+        return new ResponseEntity<>(new Respuesta("Se ha creado la sesión correctamente"), HttpStatus.OK);
+    }
