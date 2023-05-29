@@ -81,3 +81,14 @@ public class Estudiante {
     public void setDisponibilidad(List<Disponibilidad> disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Estudiante estudiante = (Estudiante) obj;
+        return codigo == estudiante.codigo;
+    }
